@@ -1,0 +1,426 @@
+{
+    "LRU": {
+        "generic": "[K cmp.Ordered, V cmp.Ordered]",
+        "typeGeneric": "[K, V]",
+        "type": "struct",
+        "methods": [
+            {
+                "name": "update",
+                "args": "key K, value V",
+                "return": ""
+            },
+            {
+                "name": "get",
+                "args": "key K",
+                "return": "V"
+            }
+        ],
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "private"
+            }
+        ]
+    },
+    "MinHeap": {
+        "type": "struct",
+        "methods": [
+            {
+                "name": "insert",
+                "args": "value int",
+                "return": ""
+            },
+            {
+                "name": "delete",
+                "args": "",
+                "return": "int"
+            }
+        ],
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "public"
+            }
+        ]
+    },
+    "Map": {
+        "generic": "[T cmp.Ordered, V any]",
+        "typeGeneric": "[T, V]",
+        "type": "struct",
+        "methods": [
+            {
+                "name": "get",
+                "args": "key T",
+                "return": "V"
+            },
+            {
+                "name": "set",
+                "args": "key T, value V",
+                "return": ""
+            },
+            {
+                "name": "delete",
+                "args": "key T",
+                "return": "V"
+            },
+            {
+                "name": "size",
+                "return": "int"
+            }
+        ]
+    },
+    "RingBuffer": {
+        "generic": "[T cmp.Ordered]",
+        "typeGeneric": "[T]",
+        "type": "struct",
+        "methods": [
+            {
+                "name": "push",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "get",
+                "args": "idx int",
+                "return": "T"
+            },
+            {
+                "name": "pop",
+                "return": "T"
+            }
+        ],
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "public"
+            }
+        ]
+    },
+    "ArrayList": {
+        "type": "struct",
+        "generic": "[T cmp.Ordered]",
+        "typeGeneric": "[T]",
+        "methods": [
+            {
+                "name": "prepend",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "insertAt",
+                "args": "item T, idx int",
+                "return": ""
+            },
+            {
+                "name": "append",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "remove",
+                "args": "item T",
+                "return": "T"
+            },
+            {
+                "name": "get",
+                "args": "idx int",
+                "return": "T"
+            },
+            {
+                "name": "removeAt",
+                "args": "idx int",
+                "return": "T"
+            }
+        ],
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "public"
+            }
+        ]
+    },
+    "SinglyLinkedList": {
+        "generic": "[T cmp.Ordered]",
+        "typeGeneric": "[T]",
+        "type": "struct",
+        "methods": [
+            {
+                "name": "prepend",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "insertAt",
+                "args": "item T, idx int",
+                "return": ""
+            },
+            {
+                "name": "append",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "remove",
+                "args": "item T",
+                "return": "T"
+            },
+            {
+                "name": "get",
+                "args": "idx int",
+                "return": "T"
+            },
+            {
+                "name": "removeAt",
+                "args": "idx int",
+                "return": "T"
+            }
+        ],
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "public"
+            }
+        ]
+    },
+    "DoublyLinkedList": {
+        "generic": "[T cmp.Ordered]",
+        "typeGeneric": "[T]",
+        "type": "struct",
+        "methods": [
+            {
+                "name": "prepend",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "insertAt",
+                "args": "item T, idx int",
+                "return": ""
+            },
+            {
+                "name": "append",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "remove",
+                "args": "item T",
+                "return": "T"
+            },
+            {
+                "name": "get",
+                "args": "idx int",
+                "return": "T"
+            },
+            {
+                "name": "removeAt",
+                "args": "idx int",
+                "return": "T"
+            }
+        ],
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "public"
+            }
+        ]
+    },
+    "Queue": {
+        "generic": "[T cmp.Ordered]",
+        "typeGeneric": "[T]",
+        "type": "struct",
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "public"
+            }
+        ],
+        "methods": [
+            {
+                "name": "enqueue",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "deque",
+                "args": "",
+                "return": "T"
+            },
+            {
+                "name": "peek",
+                "args": "",
+                "return": "T"
+            }
+        ]
+    },
+    "Stack": {
+        "generic": "[T cmp.Ordered]",
+        "typeGeneric": "[T]",
+        "type": "struct",
+        "properties": [
+            {
+                "name": "length",
+                "type": "int",
+                "scope": "public"
+            }
+        ],
+        "methods": [
+            {
+                "name": "push",
+                "args": "item T",
+                "return": ""
+            },
+            {
+                "name": "pop",
+                "args": "",
+                "return": "T"
+            },
+            {
+                "name": "peek",
+                "args": "",
+                "return": "T"
+            }
+        ]
+    },
+    "Trie": {
+        "type": "struct",
+        "methods": [
+            {
+                "name": "insert",
+                "args": "item string",
+                "return": ""
+            },
+            {
+                "name": "delete",
+                "args": "item string",
+                "return": ""
+            },
+            {
+                "name": "find",
+                "args": "partial string",
+                "return": "[]string"
+            }
+        ]
+    },
+    "BubbleSort": {
+        "type": "fn",
+        "fn": "bubble_sort",
+        "args": "arr []int",
+        "return": ""
+    },
+    "InsertionSort": {
+        "type": "fn",
+        "fn": "insertion_sort",
+        "args": "arr []int",
+        "return": ""
+    },
+    "MergeSort": {
+        "type": "fn",
+        "fn": "merge_sort",
+        "args": "arr int[]",
+        "return": ""
+    },
+    "QuickSort": {
+        "type": "fn",
+        "fn": "quick_sort",
+        "args": "arr int[]",
+        "return": ""
+    },
+    "DijkstraList": {
+        "type": "fn",
+        "fn": "dijkstra_list",
+        "args": "source int, sink int, arr WeightedAdjacencyList",
+        "return": "[]int"
+    },
+    "PrimsList": {
+        "type": "fn",
+        "fn": "prims",
+        "args": "list WeightedAdjacencyList",
+        "return": "WeightedAdjacencyList"
+    },
+    "BinarySearchList": {
+        "type": "fn",
+        "fn": "bs_list",
+        "args": "haystack []int, needle int",
+        "return": "boolean"
+    },
+    "LinearSearchList": {
+        "type": "fn",
+        "fn": "linear_search",
+        "args": "haystack int[], needle int",
+        "return": "boolean"
+    },
+    "TwoCrystalBalls": {
+        "type": "fn",
+        "fn": "two_crystal_balls",
+        "args": "breaks boolean[]",
+        "return": "int"
+    },
+    "MazeSolver": {
+        "type": "fn",
+        "fn": "solve",
+        "args": "maze []string, wall string, start Point, end Point",
+        "return": "Point[]"
+    },
+    "BTPreOrder": {
+        "type": "fn",
+        "fn": "pre_order_search",
+        "args": "head BinaryNode[int]",
+        "return": "int[]"
+    },
+    "BTInOrder": {
+        "type": "fn",
+        "fn": "in_order_search",
+        "args": "head BinaryNode[int]",
+        "return": "int[]"
+    },
+    "BTPostOrder": {
+        "type": "fn",
+        "fn": "post_order_search",
+        "args": "head BinaryNode[int]",
+        "return": "int[]"
+    },
+    "BTBFS": {
+        "type": "fn",
+        "fn": "bfs",
+        "args": "head BinaryNode[int], needle int",
+        "return": "boolean"
+    },
+    "CompareBinaryTrees": {
+        "type": "fn",
+        "fn": "compare",
+        "args": "a BinaryNode[int], b BinaryNode[int]",
+        "return": "boolean"
+    },
+    "DFSOnBST": {
+        "type": "fn",
+        "fn": "dfs",
+        "args": "head BinaryNode[int], needle int",
+        "return": "boolean"
+    },
+    "DFSGraphList": {
+        "type": "fn",
+        "fn": "dfs",
+        "args": "graph WeightedAdjacencyList, source int, needle int",
+        "return": "int[]"
+    },
+    "BFSGraphList": {
+        "type": "fn",
+        "fn": "bfs",
+        "args": "graph WeightedAdjacencyList, source int, needle int",
+        "return": "int[]"
+    },
+    "BFSGraphMatrix": {
+        "type": "fn",
+        "fn": "bfs",
+        "args": "graph WeightedAdjacencyMatrix, source int, needle int",
+        "return": "int[]"
+    }
+}
