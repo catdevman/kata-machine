@@ -1,3 +1,7 @@
+
+PKG=./...
+TEST=.
+
 clean:
 	rm *_gen.go
 
@@ -6,4 +10,4 @@ gen:
 	go fmt ./...
 
 test:
-	go test ./...
+	go test -v $(PKG) -run $(TEST)
