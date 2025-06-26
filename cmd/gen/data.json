@@ -12,7 +12,7 @@
             {
                 "name": "get",
                 "args": "key K",
-                "return": "V"
+                "return": "(V, bool)"
             }
         ],
         "properties": [
@@ -53,7 +53,7 @@
             {
                 "name": "get",
                 "args": "key T",
-                "return": "V"
+                "return": "(V, bool)"
             },
             {
                 "name": "set",
